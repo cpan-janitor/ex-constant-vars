@@ -1,0 +1,47 @@
+NAME
+    ex::constant::vars - Perl pragma to create readonly variables
+
+INSTALLATION
+
+  Shell> gunzip ex-constant-vars-0.01.tar.gz
+  Shell> tar -xvf ex-constant-vars-0.01.tar
+  Shell> cd ex-constant-vars-0.01
+  Shell> perl Makefile.PL
+  Shell> make
+  Shell> make test
+  Shell> make install
+
+SYNOPSIS
+    Using the "tie()" interface:
+
+      use ex::constant::vars;
+      tie my $pi,     'ex::constant::vars', 4 * atan2( 1, 1 );
+      tie my @family, 'ex::constant::vars', qw( John Jane );
+      tie my %age,    'ex::constant::vars', John => 27,
+                                            Jane => 'Back off!';
+
+    Using the "const()" function:
+
+      use ex::constant::vars 'const';
+      const SCALAR my $pi,     4 * atan2( 1, 1 );
+      const ARRAY  my @family, qw( John Jane );
+      const HASH   my %age,    John => 27, Jane => 'Back off!';
+
+    Using "import()" for compile time creation:
+
+      use ex::constant::vars (
+        '$pi'     => 4 * atan2( 1, 1 ),
+        '@family' => [ qw( John Jane ) ],
+        '%age'    => { John => 27, Jane => 'Back off!' },
+      );
+
+DESCRIPTION
+    This package allows you to create readonly variables.
+
+AUTHOR
+            Casey R. Tweten, <crt@kiski.net>
+
+COPYRIGHT
+            Copyright (c) 2000 Casey R. Tweten. All rights reserved.
+            This program is free software; you can redistribute it and/or
+            modify it under the same terms as Perl itself.
