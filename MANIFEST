@@ -3,4 +3,4 @@ MANIFEST
 Makefile.PL
 README
 test.pl
-vars.pm
+lib/ex/constant/vars.pm
