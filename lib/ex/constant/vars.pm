@@ -14,7 +14,7 @@ our @ISA        = qw(
                       ex::constant::vars::hash
                     );
 our @EXPORT_OK  = qw( const SCALAR ARRAY HASH );
-our $VERSION    = '0.01';
+our $VERSION    = '0.02';
 
 sub const {
   my $type   = shift;
@@ -67,7 +67,7 @@ sub import {
 package ex::constant::vars::scalar;
 use Carp;
 $Carp::CarpLevel = 1;
-sub TIESCALAR { bless \($_=pop), __PACKAGE__ }
+sub TIESCALAR { shift; bless \(my $scalar = shift), __PACKAGE__ }
 sub FETCH     { ${$_[0]} }
 sub STORE     { croak "Modification of a read-only value attempted" }
 
