@@ -28,9 +28,9 @@ sub const {
   }
 }
 
-sub SCALAR (\$$;) { 'scalar', @_ }
-sub ARRAY  (\@@;) { 'array',  @_ }
-sub HASH   (\%%;) { 'hash',   @_ }
+sub SCALAR (\$$) { 'scalar', @_ }
+sub ARRAY  (\@@) { 'array',  @_ }
+sub HASH   (\%%) { 'hash',   @_ }
 
 sub import {
   my $self = shift;
