@@ -1,5 +1,13 @@
 Revision history for Perl extension ex::constant::vars.
 
+0.02 unreleased
+
+    - fixed bug where multiple scalar constants would end up with the value of the most recently declared one
+    - fixed warning about prototypes
+    - moved vars.pm to lib/ex/constant/vars.pm
+    - created a t/ test directory, and moved test.pl to t/original.t
+    - added t/tie.t with more tests for the tie interface, including for the multiple scalar bug
+
 0.01  Mon Nov 20 15:10:28 2000
 	- original version uploaded to CPAN
 

@@ -3,9 +3,9 @@ NAME
 
 INSTALLATION
 
-  Shell> gunzip ex-constant-vars-0.01.tar.gz
-  Shell> tar -xvf ex-constant-vars-0.01.tar
-  Shell> cd ex-constant-vars-0.01
+  Shell> gunzip ex-constant-vars-0.02.tar.gz
+  Shell> tar -xvf ex-constant-vars-0.02.tar
+  Shell> cd ex-constant-vars-0.02
   Shell> perl Makefile.PL
   Shell> make
   Shell> make test
