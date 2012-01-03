@@ -4,4 +4,5 @@ Makefile.PL
 README
 t/original.t
 t/tie.t
+t/const.t
 lib/ex/constant/vars.pm
