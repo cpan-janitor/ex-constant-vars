@@ -7,6 +7,8 @@ Revision history for Perl extension ex::constant::vars.
     - moved vars.pm to lib/ex/constant/vars.pm
     - created a t/ test directory, and moved test.pl to t/original.t
     - added t/tie.t with more tests for the tie interface, including for the multiple scalar bug
+    - added t/const.t with more tests for the const interface
+    - added t/import.t with more tests for the const interface
 
 0.01  Mon Nov 20 15:10:28 2000
 	- original version uploaded to CPAN
