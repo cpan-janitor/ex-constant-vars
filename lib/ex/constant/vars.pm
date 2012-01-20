@@ -160,7 +160,7 @@ You can store a record set in the hash when it's declared as readonly.
 
 C<delete> is effictivley disabled for a readonly hash.
 
-=over
+=back
 
 =head2 The C<const()> function
 
