@@ -199,14 +199,12 @@ Produces:
  constvars: 24 wallclock secs (22.55 usr +  0.05 sys = 22.60 CPU) @ 22123.89/s (n=500000)
   standard:  2 wallclock secs ( 1.12 usr +  0.00 sys =  1.12 CPU) @ 447761.19/s (n=500000)
 
-=head2 Why did you write this?
-
-I wrote it because I believe that it is I<a> solution.  I also believe
-that new ways of implementing this are comming in one form or another.
 
 =head1 AUTHOR
 
-Casey R. Tweten, <F<crt@kiski.net>>
+This module is now maintained by Neil Bowers E<lt>neil@bowers.comE<gt>.
+
+It was originally written by Casey R. Tweten.
 
 =head1 SEE ALSO
 
@@ -214,7 +212,10 @@ L<perl>, L<perltie>, L<constant>.
 
 =head1 COPYRIGHT
 
-Copyright (c) 1995 Casey R. Tweten. All rights reserved.
+Copyright (c) 2012 Neil Bowers. All rights reserved.
+
+Copyright (c) 1995-2000 Casey R. Tweten. All rights reserved.
+
 This program is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
 
