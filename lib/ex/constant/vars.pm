@@ -7,6 +7,8 @@ use Carp;
 
 require Exporter;
 
+our $VERSION    = '0.03';
+
 our @ISA        = qw(
                       Exporter
                       ex::constant::vars::scalar
@@ -14,7 +16,6 @@ our @ISA        = qw(
                       ex::constant::vars::hash
                     );
 our @EXPORT_OK  = qw( const SCALAR ARRAY HASH );
-our $VERSION    = '0.02';
 
 sub const {
   my $type   = shift;
@@ -99,11 +100,9 @@ sub STORE    { croak "Modification of a read-only value attempted" }
 
 __END__
 
-# Below is stub documentation for your module. You better edit it!
-
 =head1 NAME
 
-ex::constant::vars - Perl pragma to create readonly variables
+ex::constant::vars - create readonly variables (alternative to constant pragma)
 
 =head1 SYNOPSIS
 
@@ -133,47 +132,40 @@ Using C<import()> for compile time creation:
 =head1 DESCRIPTION
 
 This package allows you to create readonly variables.
+Unlike the C<constant> pragma, this module lets you create readonly scalars, arrays and hashes.
 
-=head2 Implementation
-
-This package C<tie()>s variables to a class that disables any
-attempt to modify the variables data.
+This module C<tie()>s variables to a class that disables any attempt to modify a variable's data.
 
 =over 4
 
-=item Constant Scalars
+=item Scalar
 
-You can store a value in the scalar when it's declared as readonly.
+You cannot change the value in any way: not only assignment,
+but functions such as chomp and chop will fail.
 
-C<chomp> and C<chop> are effectivley disabled for a readonly scalar.
+=item Array
 
-=item Constant Arrays
+You cannot add to the array (unshift, push), remove from the array (shift, pop),
+nor change any values in the array.
 
-You can store a list in the array when it's declared as readonly.
+=item Hash
 
-C<pop>, C<push>, C<shift>, C<splice> and C<unshift> are effictivley
-disabled for a readonly array.
-
-=item Constant Hashes
-
-You can store a record set in the hash when it's declared as readonly.
-
-C<delete> is effictivley disabled for a readonly hash.
+You cannot change items in the hash, add new items to it, nor delete a key.
 
 =back
 
 =head2 The C<const()> function
 
-When the C<const()> function is imported, so is C<SCALAR()>, C<ARRAY()>
-and C<HASH()>.  These functions allow C<const()> to know what type of
-variable it's dealing with.  C<const()> returns the C<tied()> object of
-the variable.
+When the C<const()> function is imported,
+so are the helper functions C<SCALAR()>, C<ARRAY()>, and C<HASH()>.
+These functions let C<const()> know what type of variable it's dealing with.
+C<const()> returns the C<tied()> object of the variable.
 
 =head1 Caveats
 
-This implementation can be slow, by nature.  C<tie()>ing variables
-to a class is going to be slow.  If you need the same functionality,
-and much less of a speed hit, take a look at this:
+This implementation can be slow, by nature.
+C<tie()>ing variables to a class is going to be slow.
+If you need the same functionality, and much less of a speed hit, take a look at this:
 L<http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/2000-05/msg00777.html>
 
 The fastest method of declaring readonly variables with this pakcage
