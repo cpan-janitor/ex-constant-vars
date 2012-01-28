@@ -1,5 +1,12 @@
 Revision history for Perl module ex::constant::vars
 
+0.03 2012-01-28
+
+    - Specified license type as 'perl' in Makefile.PL
+    - Added Carp and Exporter as pre-reqs in Makefile.PL
+    - Reworded the one-line description in NAME section in pod.
+    - Other updates to documentation
+
 0.02 2012-01-27
 
     - fixed bug where multiple scalar constants would end up
