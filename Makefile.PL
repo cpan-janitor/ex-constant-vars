@@ -4,5 +4,12 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     'NAME'		=> 'ex::constant::vars',
     'VERSION_FROM'	=> 'lib/ex/constant/vars.pm', # finds $VERSION
-    'PREREQ_PM'		=> {}, # e.g., Module::Name => 1.1
+    'PREREQ_PM'		=> {
+                        Carp     => 0,
+                        Exporter => 0,
+                       },
+    ($ExtUtils::MakeMaker::VERSION >= 6.3002
+      ? ('LICENSE'=> 'perl')
+      : ()),
+
 );
