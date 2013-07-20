@@ -3,6 +3,7 @@ Revision history for Perl module ex::constant::vars
 0.04 2013-07-20
     - Tweaked format of Changes to confirm to CPAN::Changes::Spec
     - Added repository details to metadata in Makefile.PL
+    - Added repository details to pod documentation
 
 0.03 2012-01-28
     - Specified license type as 'perl' in Makefile.PL

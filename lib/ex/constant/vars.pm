@@ -7,7 +7,7 @@ use Carp;
 
 require Exporter;
 
-our $VERSION    = '0.03';
+our $VERSION    = '0.04';
 
 our @ISA        = qw(
                       Exporter
@@ -191,6 +191,9 @@ Produces:
  constvars: 24 wallclock secs (22.55 usr +  0.05 sys = 22.60 CPU) @ 22123.89/s (n=500000)
   standard:  2 wallclock secs ( 1.12 usr +  0.00 sys =  1.12 CPU) @ 447761.19/s (n=500000)
 
+=head1 REPOSITORY
+
+L<https://github.com/neilbowers/ex-constant-vars>
 
 =head1 AUTHOR
 
@@ -204,7 +207,7 @@ L<perl>, L<perltie>, L<constant>.
 
 =head1 COPYRIGHT
 
-Copyright (c) 2012 Neil Bowers. All rights reserved.
+Copyright (c) 2012-2013 Neil Bowers. All rights reserved.
 
 Copyright (c) 1995-2000 Casey R. Tweten. All rights reserved.
 
