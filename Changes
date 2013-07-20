@@ -1,14 +1,15 @@
 Revision history for Perl module ex::constant::vars
 
-0.03 2012-01-28
+0.04 2013-07-20
+    - Tweaked format of Changes to confirm to CPAN::Changes::Spec
 
+0.03 2012-01-28
     - Specified license type as 'perl' in Makefile.PL
     - Added Carp and Exporter as pre-reqs in Makefile.PL
     - Reworded the one-line description in NAME section in pod.
     - Other updates to documentation
 
 0.02 2012-01-27
-
     - fixed bug where multiple scalar constants would end up
       with the value of the most recently declared one
     - fixed warning about prototypes
@@ -19,6 +20,6 @@ Revision history for Perl module ex::constant::vars
     - added t/const.t with more tests for the const interface
     - added t/import.t with more tests for the const interface
 
-0.01  Mon Nov 20 15:10:28 2000
+0.01 2000-11-20
     - original version uploaded to CPAN
 
