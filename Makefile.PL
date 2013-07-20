@@ -8,6 +8,11 @@ WriteMakefile(
                         Carp     => 0,
                         Exporter => 0,
                        },
+    META_MERGE => {
+        resources => {
+            repository => 'https://github.com/neilbowers/ex-constant-vars',
+        },
+    },
     ($ExtUtils::MakeMaker::VERSION >= 6.3002
       ? ('LICENSE'=> 'perl')
       : ()),
