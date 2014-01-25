@@ -14,6 +14,8 @@ WriteMakefile(
     'PREREQ_PM'		=> {
                         Carp     => 0,
                         Exporter => 0,
+                        strict   => 0,
+                        warnings => 0,
                        },
 
     ($mm_ver <= 6.45

@@ -3,6 +3,7 @@ Revision history for Perl module ex::constant::vars
 0.05 2014-01-25
     - Switched to metaspec v2 and updated github repo info
     - Specified MIN_PERL_VERSION as 5.6.0
+    - Added strict and warnings to the list of prereqs
 
 0.04 2013-07-20
     - Tweaked format of Changes to confirm to CPAN::Changes::Spec
