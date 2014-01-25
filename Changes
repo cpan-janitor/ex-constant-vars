@@ -1,5 +1,8 @@
 Revision history for Perl module ex::constant::vars
 
+0.05 2014-01-25
+    - Switched to metaspec v2 and updated github repo info
+
 0.04 2013-07-20
     - Tweaked format of Changes to confirm to CPAN::Changes::Spec
     - Added repository details to metadata in Makefile.PL
