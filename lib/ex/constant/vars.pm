@@ -64,6 +64,7 @@ sub import {
 
 
 package ex::constant::vars::scalar;
+
 use Carp;
 $Carp::CarpLevel = 1;
 sub TIESCALAR { shift; bless \(my $scalar = shift), __PACKAGE__ }
@@ -72,6 +73,7 @@ sub STORE     { croak "Modification of a read-only value attempted" }
 
 
 package ex::constant::vars::array;
+
 use Carp;
 $Carp::CarpLevel = 1;
 sub TIEARRAY  { shift; bless $_=\@_, __PACKAGE__ }
@@ -84,6 +86,7 @@ sub STORE     { croak "Modification of a read-only value attempted" }
 
 
 package ex::constant::vars::hash;
+
 use Carp;
 $Carp::CarpLevel = 1;
 sub TIEHASH  { bless {@_[1...$#_]}, __PACKAGE__ }
