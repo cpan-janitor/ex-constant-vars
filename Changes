@@ -2,6 +2,7 @@ Revision history for Perl module ex::constant::vars
 
 0.06 2015-10-21 NEILB
     - Switched to Dist::Zilla
+    - Switched URL for repo to reflect my changed github username
 
 0.05 2014-01-25
     - Switched to metaspec v2 and updated github repo info

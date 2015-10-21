@@ -191,7 +191,7 @@ Produces:
 
 =head1 REPOSITORY
 
-L<https://github.com/neilbowers/ex-constant-vars>
+L<https://github.com/neilb/ex-constant-vars>
 
 =head1 AUTHOR
 
