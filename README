@@ -1,47 +1,21 @@
-NAME
-    ex::constant::vars - Perl pragma to create readonly variables
 
-INSTALLATION
+    README for Perl module ex::constant::vars
 
-  Shell> gunzip ex-constant-vars-0.02.tar.gz
-  Shell> tar -xvf ex-constant-vars-0.02.tar
-  Shell> cd ex-constant-vars-0.02
-  Shell> perl Makefile.PL
-  Shell> make
-  Shell> make test
-  Shell> make install
+This module is used to create readonly variables to use
+as opaque enumerated constants.
 
-SYNOPSIS
-    Using the "tie()" interface:
+You can read a nicely formatted version of the documentation for
+this module online:
 
-      use ex::constant::vars;
-      tie my $pi,     'ex::constant::vars', 4 * atan2( 1, 1 );
-      tie my @family, 'ex::constant::vars', qw( John Jane );
-      tie my %age,    'ex::constant::vars', John => 27,
-                                            Jane => 'Back off!';
+    https://metacpan.org/pod/ex::constant::vars
 
-    Using the "const()" function:
+You should be able to install this using your usual method for installing
+modules from CPAN. If you don't have one, have a look at:
 
-      use ex::constant::vars 'const';
-      const SCALAR my $pi,     4 * atan2( 1, 1 );
-      const ARRAY  my @family, qw( John Jane );
-      const HASH   my %age,    John => 27, Jane => 'Back off!';
+    http://www.cpan.org/modules/INSTALL.html
 
-    Using "import()" for compile time creation:
+This module was originally written by Casey Tweten.
+It is currently being maintained by Neil Bowers <neilb@cpan.org>.
 
-      use ex::constant::vars (
-        '$pi'     => 4 * atan2( 1, 1 ),
-        '@family' => [ qw( John Jane ) ],
-        '%age'    => { John => 27, Jane => 'Back off!' },
-      );
-
-DESCRIPTION
-    This package allows you to create readonly variables.
-
-AUTHOR
-            Casey R. Tweten, <crt@kiski.net>
-
-COPYRIGHT
-            Copyright (c) 2000 Casey R. Tweten. All rights reserved.
-            This program is free software; you can redistribute it and/or
-            modify it under the same terms as Perl itself.
+Copyright (c) 1995-2000 Casey R. Tweten. All rights reserved.
+Copyright (c) 2012-2015 Neil Bowers. All rights reserved.

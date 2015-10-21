@@ -7,8 +7,6 @@ use Carp;
 
 require Exporter;
 
-our $VERSION    = '0.05';
-
 our @ISA        = qw(
                       Exporter
                       ex::constant::vars::scalar
