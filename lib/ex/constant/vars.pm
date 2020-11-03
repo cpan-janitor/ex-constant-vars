@@ -133,9 +133,14 @@ Using C<import()> for compile time creation:
 =head1 DESCRIPTION
 
 This package allows you to create readonly variables.
-Unlike the C<constant> pragma, this module lets you create readonly scalars, arrays and hashes.
+Unlike the C<constant> pragma,
+this module lets you create readonly scalars, arrays and hashes.
 
-This module C<tie()>s variables to a class that disables any attempt to modify a variable's data.
+The L<Const::Fast> module is a much better solution for
+immutable variables.
+
+This module C<tie()>s variables to a class
+that disables any attempt to modify a variable's data.
 
 =over 4
 
@@ -198,17 +203,15 @@ L<https://github.com/neilb/ex-constant-vars>
 
 =head1 AUTHOR
 
-This module is now maintained by Neil Bowers E<lt>neil@bowers.comE<gt>.
+This module was written by Casey R. Tweten.
 
-It was originally written by Casey R. Tweten.
+It's now in maintence mode.
 
 =head1 SEE ALSO
 
-L<perl>, L<perltie>, L<constant>.
+For immutable variables you should use L<Const::Fast>.
 
 =head1 COPYRIGHT
-
-Copyright (c) 2012-2013 Neil Bowers. All rights reserved.
 
 Copyright (c) 1995-2000 Casey R. Tweten. All rights reserved.
 
